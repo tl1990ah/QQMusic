@@ -11,4 +11,23 @@
 #import "UIBarButtonItem+Extension.h"
 #import "UIView+Extension.h"
 
+
+#ifdef DEBUG // 调试状态，打开LOG功能
+#define LCLog(...) NSLog(__VA_ARGS__)
+#else  // 发布状态，关闭LOG功能
+#define LCLog(...)
+#endif
+
+// 颜色
+#define QQColor(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:a]
+// 随机色
+#define QQRandomColor QQColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256), 1.0)
+
+#define IndexColor HQB_color(0xf4f4f4)
+
+// 屏幕尺寸
+#define QQScreenW  [UIScreen mainScreen].bounds.size.width
+#define QQScreenH  [UIScreen mainScreen].bounds.size.height
+
+
 #endif

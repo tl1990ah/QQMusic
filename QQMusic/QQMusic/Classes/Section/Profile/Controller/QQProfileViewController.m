@@ -7,6 +7,7 @@
 //
 
 #import "QQProfileViewController.h"
+#import "QQProfileHeaderView.h"
 
 @interface QQProfileViewController ()
 
@@ -18,7 +19,17 @@
 {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor orangeColor];
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    [self setupHeaderView];
 }
+
+- (void)setupHeaderView
+{
+    QQProfileHeaderView *headerView = [[QQProfileHeaderView alloc] initWithFrame:CGRectMake(QQScreenW - 300, 0, 300, 170)];
+    headerView.backgroundColor = [UIColor redColor];
+    [self.view addSubview:headerView];
+}
+
 
 @end
