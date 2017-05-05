@@ -10,7 +10,7 @@
 #import "QQProfileHeaderView.h"
 #import "QQProfileFooteriew.h"
 #import "QQLeftViewCell.h"
-#import "QQLeftViewItem.h"
+#import "QQSwitchItem.h"
 
 @interface QQProfileViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, weak) QQProfileFooteriew *footerView;
@@ -46,13 +46,13 @@
 
 - (void)setupDatas
 {
-    QQLeftViewItem *item0 = [QQLeftViewItem itemWithTitle:@"仅Wi-Fi联网" subTitle:nil];
+    QQSwitchItem *item0 = [QQSwitchItem itemWithTitle:@"仅Wi-Fi联网" subTitle:nil];
     [self.datas addObject:item0];
     
     QQLeftViewItem *item1 = [QQLeftViewItem itemWithTitle:@"定时关闭" subTitle:nil];
     [self.datas addObject:item1];
     
-    QQLeftViewItem *item2 = [QQLeftViewItem itemWithTitle:@"免流量服务" subTitle:nil];
+    QQLeftViewItem *item2 = [QQLeftViewItem itemWithTitle:@"免流量服务" subTitle:@"在线听歌免流量"];
     [self.datas addObject:item2];
     
     QQLeftViewItem *item3 = [QQLeftViewItem itemWithTitle:@"传歌到手机" subTitle:nil];
@@ -113,6 +113,8 @@
     }];
 }
 
+
+#pragma mark -- UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return self.datas.count;
@@ -126,6 +128,10 @@
     return cell;
 }
 
-
+#pragma mark -- UITableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
 
 @end

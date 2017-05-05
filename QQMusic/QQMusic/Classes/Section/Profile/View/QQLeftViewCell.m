@@ -7,8 +7,13 @@
 //
 
 #import "QQLeftViewCell.h"
-#import "QQLeftViewItem.h"
+#import "QQSwitchItem.h"
 
+@interface QQLeftViewCell ()
+
+@property (nonatomic, weak) UILabel *subTitleLabel;
+
+@end
 
 @implementation QQLeftViewCell
 
@@ -17,8 +22,17 @@
     _leftItem = leftItem;
     
     self.textLabel.text = leftItem.title;
+    if([leftItem isKindOfClass:[QQSwitchItem class]]){
+        self.accessoryView = [[UISwitch alloc] init];
+    }else{
+        UILabel *subTitleLabel = [[UILabel alloc] init];
+        subTitleLabel.text = leftItem.subTitle;
+        subTitleLabel.font = [UIFont systemFontOfSize:12];
+        subTitleLabel.textColor = QQColor(205, 205, 205, 1.0);
+        [subTitleLabel sizeToFit];
+        self.accessoryView = subTitleLabel;
+    }
 }
-
 
 + (instancetype)cellWithTableView:(UITableView *)tableView
 {
