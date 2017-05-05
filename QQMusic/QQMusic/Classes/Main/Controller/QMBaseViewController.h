@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "QQNavigationController.h"
+#import "QMNavigationController.h"
 
-@interface QQBaseViewController : UIViewController
+@interface QMBaseViewController : UIViewController
 
 @end

@@ -8,7 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface QQProfileHeaderView : UIView
+@protocol QQProfileHeaderViewDelegate <NSObject>
+
+@required
+- (void)btnClick:(UIButton *)button;
+
+@end
+
+@interface QMProfileHeaderView : UIView
 
 - (instancetype)initWithImageNames:(NSArray *)imageNames titles:(NSArray *)titles subTitles:(NSArray *)subTitles frame:(CGRect)frame;
 

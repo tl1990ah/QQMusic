@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface QQNavigationController : UINavigationController
+@interface QMNavigationController : UINavigationController
 
 @end

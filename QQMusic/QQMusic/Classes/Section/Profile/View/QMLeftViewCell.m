@@ -6,23 +6,21 @@
 //  Copyright © 2017年 com.zhejiangchain.ios. All rights reserved.
 //
 
-#import "QQLeftViewCell.h"
-#import "QQSwitchItem.h"
+#import "QMLeftViewCell.h"
+#import "QMSwitchItem.h"
 
-@interface QQLeftViewCell ()
-
-@property (nonatomic, weak) UILabel *subTitleLabel;
+@interface QMLeftViewCell ()
 
 @end
 
-@implementation QQLeftViewCell
+@implementation QMLeftViewCell
 
-- (void)setLeftItem:(QQLeftViewItem *)leftItem
+- (void)setLeftItem:(QMLeftViewItem *)leftItem
 {
     _leftItem = leftItem;
     
     self.textLabel.text = leftItem.title;
-    if([leftItem isKindOfClass:[QQSwitchItem class]]){
+    if([leftItem isKindOfClass:[QMSwitchItem class]]){
         self.accessoryView = [[UISwitch alloc] init];
     }else{
         UILabel *subTitleLabel = [[UILabel alloc] init];
@@ -37,9 +35,9 @@
 + (instancetype)cellWithTableView:(UITableView *)tableView
 {
     static NSString *Id = @"menu";
-    QQLeftViewCell *cell = [tableView dequeueReusableCellWithIdentifier:Id];
+    QMLeftViewCell *cell = [tableView dequeueReusableCellWithIdentifier:Id];
     if(!cell){
-        cell = [[QQLeftViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:Id];
+        cell = [[QMLeftViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:Id];
     }
     cell.textLabel.font = [UIFont systemFontOfSize:16];
     return cell;

@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface QQLeftViewItem : NSObject
+@interface QMLeftViewItem : NSObject
 
 /** 标题 */
 @property (nonatomic, copy) NSString *title;

@@ -6,16 +6,15 @@
 //  Copyright © 2017年 com.zhejiangchain.ios. All rights reserved.
 //
 
-#import "QQDrawerViewController.h"
-#import "QQProfileViewController.h"
-#import "QQHomeViewController.h"
+#import "QMDrawerViewController.h"
+#import "QMProfileViewController.h"
+#import "QMHomeViewController.h"
 
-
-@interface QQDrawerViewController ()
+@interface QMDrawerViewController ()
 @property (nonatomic, assign) CGFloat drawerMaxWidth;
-@property (nonatomic, strong) QQHomeViewController *homeViewController;
-@property (nonatomic, strong) QQNavigationController *mainNav;
-@property (nonatomic, strong) QQProfileViewController *leftViewController;
+@property (nonatomic, strong) QMHomeViewController *homeViewController;
+@property (nonatomic, strong) QMNavigationController *mainNav;
+@property (nonatomic, strong) QMProfileViewController *leftViewController;
 /** 打开左边控制器后添加的遮盖按钮 */
 @property (nonatomic, strong) UIButton *coverButton;
 
@@ -23,19 +22,19 @@
 @property (nonatomic, strong) UIViewController *destViewController;
 @end
 
-@implementation QQDrawerViewController
+@implementation QMDrawerViewController
 
 + (instancetype)sharedDrawerViewController
 {
-    return (QQDrawerViewController *)[UIApplication sharedApplication].keyWindow.rootViewController;
+    return (QMDrawerViewController *)[UIApplication sharedApplication].keyWindow.rootViewController;
 }
 
-+ (instancetype)drawerWithLeftViewController:(UIViewController *)leftVC mainViewController:(QQNavigationController *)mainNav andMaxLeftWidth:(CGFloat)leftWidth
++ (instancetype)drawerWithLeftViewController:(UIViewController *)leftVC mainViewController:(QMNavigationController *)mainNav andMaxLeftWidth:(CGFloat)leftWidth
 {
-    QQDrawerViewController *drawerVC = [[QQDrawerViewController alloc] init];
+    QMDrawerViewController *drawerVC = [[QMDrawerViewController alloc] init];
     drawerVC.drawerMaxWidth = leftWidth;
     drawerVC.homeViewController = mainNav.childViewControllers.firstObject;
-    drawerVC.leftViewController = (QQProfileViewController *)leftVC;
+    drawerVC.leftViewController = (QMProfileViewController *)leftVC;
     drawerVC.mainNav = mainNav;
     
     [drawerVC addChildViewController:leftVC];

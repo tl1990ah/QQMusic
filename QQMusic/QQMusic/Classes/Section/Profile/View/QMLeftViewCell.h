@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@class QQLeftViewItem;
+@class QMLeftViewItem;
 
-@interface QQLeftViewCell : UITableViewCell
+@interface QMLeftViewCell : UITableViewCell
 
-@property (nonatomic, strong) QQLeftViewItem *leftItem;
+@property (nonatomic, strong) QMLeftViewItem *leftItem;
 
 + (instancetype)cellWithTableView:(UITableView *)tableView;
 

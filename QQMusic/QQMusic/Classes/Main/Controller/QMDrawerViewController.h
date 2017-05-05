@@ -6,9 +6,9 @@
 //  Copyright © 2017年 com.zhejiangchain.ios. All rights reserved.
 //
 
-#import "QQBaseViewController.h"
+#import "QMBaseViewController.h"
 
-@interface QQDrawerViewController : QQBaseViewController
+@interface QMDrawerViewController : QMBaseViewController
 
 /**
  *  创建LCDrawerViewController单例
@@ -18,7 +18,7 @@
 /**
  *  创建一个抽屉控制器
  */
-+ (instancetype)drawerWithLeftViewController:(UIViewController *)leftVC mainViewController:(QQNavigationController *)mainNav andMaxLeftWidth:(CGFloat)leftWidth;
++ (instancetype)drawerWithLeftViewController:(UIViewController *)leftVC mainViewController:(QMNavigationController *)mainNav andMaxLeftWidth:(CGFloat)leftWidth;
 
 /**
  * 打开抽屉,显示左边菜单

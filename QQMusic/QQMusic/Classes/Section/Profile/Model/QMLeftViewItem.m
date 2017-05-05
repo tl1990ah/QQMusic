@@ -6,13 +6,13 @@
 //  Copyright © 2017年 com.zhejiangchain.ios. All rights reserved.
 //
 
-#import "QQLeftViewItem.h"
+#import "QMLeftViewItem.h"
 
-@implementation QQLeftViewItem
+@implementation QMLeftViewItem
 
 + (instancetype)itemWithTitle:(NSString *)title subTitle:(NSString *)subTitle
 {
-    QQLeftViewItem *item = [[self alloc] init];
+    QMLeftViewItem *item = [[self alloc] init];
     item.title = title;
     item.subTitle = subTitle;
     return item;

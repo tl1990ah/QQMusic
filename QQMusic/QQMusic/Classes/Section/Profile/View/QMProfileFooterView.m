@@ -6,9 +6,10 @@
 //  Copyright © 2017年 com.zhejiangchain.ios. All rights reserved.
 //
 
-#import "QQProfileFooteriew.h"
+#import "QMProfileFooterView.h"
 
-@implementation QQProfileFooteriew
+
+@implementation QMProfileFooterView
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -26,9 +27,13 @@
     [self addSubview:bottomLine];
     
     UIButton *setBtn = [self makeFooterViewWithButtonImageName:@"more_icon_bottom_setting" andButtonWithTitle:@"设置"];
+    setBtn.tag = SetBtn;
+    [setBtn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
     [setBtn setImageEdgeInsets:UIEdgeInsetsMake(0, -10, 0, 0)];
     
     UIButton *loginBtn = [self makeFooterViewWithButtonImageName:@"more_icon_bottom_login" andButtonWithTitle:@"立即登录"];
+    loginBtn.tag = LoginBtn;
+    [loginBtn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
     [loginBtn setTitleEdgeInsets:UIEdgeInsetsMake(0, 10, 0, 0)];
     
     [bottomLine mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -64,6 +69,13 @@
     btn.titleLabel.font = [UIFont systemFontOfSize:14];
     [self addSubview:btn];
     return btn;
+}
+
+- (void)btnClick:(UIButton *)button
+{
+    if(self.delegate && [self.delegate respondsToSelector:@selector(btnClick:)]){
+        [self.delegate btnClick:button];
+    }
 }
 
 @end

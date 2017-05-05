@@ -6,14 +6,14 @@
 //  Copyright © 2017年 com.zhejiangchain.ios. All rights reserved.
 //
 
-#import "QQProfileHeaderView.h"
+#import "QMProfileHeaderView.h"
 
-@interface QQProfileHeaderView ()
+@interface QMProfileHeaderView ()
 
 
 @end
 
-@implementation QQProfileHeaderView
+@implementation QMProfileHeaderView
 
 - (instancetype)initWithImageNames:(NSArray *)imageNames titles:(NSArray *)titles subTitles:(NSArray *)subTitles frame:(CGRect)frame
 {

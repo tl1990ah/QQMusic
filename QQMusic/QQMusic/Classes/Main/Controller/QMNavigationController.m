@@ -6,13 +6,13 @@
 //  Copyright © 2017年 com.zhejiangchain.ios. All rights reserved.
 //
 
-#import "QQNavigationController.h"
+#import "QMNavigationController.h"
 
-@interface QQNavigationController ()
+@interface QMNavigationController ()
 
 @end
 
-@implementation QQNavigationController
+@implementation QMNavigationController
 
 - (void)viewDidLoad
 {

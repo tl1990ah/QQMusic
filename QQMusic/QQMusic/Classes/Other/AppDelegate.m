@@ -7,9 +7,9 @@
 //
 
 #import "AppDelegate.h"
-#import "QQDrawerViewController.h"
-#import "QQHomeViewController.h"
-#import "QQProfileViewController.h"
+#import "QMDrawerViewController.h"
+#import "QMHomeViewController.h"
+#import "QMProfileViewController.h"
 
 @interface AppDelegate ()
 
@@ -23,12 +23,12 @@
     self.window = [[UIWindow alloc] init];
     self.window.frame = [UIScreen mainScreen].bounds;
     
-    QQHomeViewController *homeVC = [[QQHomeViewController alloc] init];
-    QQNavigationController *mainNav = [[QQNavigationController alloc] initWithRootViewController:homeVC];
+    QMHomeViewController *homeVC = [[QMHomeViewController alloc] init];
+    QMNavigationController *mainNav = [[QMNavigationController alloc] initWithRootViewController:homeVC];
     
-    QQProfileViewController *profileVC = [[QQProfileViewController alloc] init];
+    QMProfileViewController *profileVC = [[QMProfileViewController alloc] init];
     
-    QQDrawerViewController *drawerVC = [QQDrawerViewController drawerWithLeftViewController:profileVC mainViewController:mainNav andMaxLeftWidth:300];
+    QMDrawerViewController *drawerVC = [QMDrawerViewController drawerWithLeftViewController:profileVC mainViewController:mainNav andMaxLeftWidth:300];
     self.window.rootViewController = drawerVC;
     [self.window makeKeyAndVisible];
     return YES;

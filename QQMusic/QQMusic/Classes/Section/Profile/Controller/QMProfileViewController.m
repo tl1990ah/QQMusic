@@ -6,20 +6,23 @@
 //  Copyright © 2017年 com.zhejiangchain.ios. All rights reserved.
 //
 
-#import "QQProfileViewController.h"
-#import "QQProfileHeaderView.h"
-#import "QQProfileFooteriew.h"
-#import "QQLeftViewCell.h"
-#import "QQSwitchItem.h"
+#import "QMDrawerViewController.h"
+#import "QMProfileViewController.h"
+#import "QMProfileHeaderView.h"
+#import "QMProfileFooterView.h"
+#import "QMLeftViewCell.h"
+#import "QMSwitchItem.h"
+#import "QMSettingViewController.h"
+#import "QMLoginViewController.h"
 
-@interface QQProfileViewController ()<UITableViewDelegate, UITableViewDataSource>
-@property (nonatomic, weak) QQProfileFooteriew *footerView;
-@property (nonatomic, weak) QQProfileHeaderView *headerView;
+@interface QMProfileViewController ()<UITableViewDelegate, UITableViewDataSource, QMProfileFooterViewDelegate>
+@property (nonatomic, weak) QMProfileFooterView *footerView;
+@property (nonatomic, weak) QMProfileHeaderView *headerView;
 
 @property (nonatomic, strong) NSMutableArray *datas;
 @end
 
-@implementation QQProfileViewController
+@implementation QMProfileViewController
 
 - (NSMutableArray *)datas
 {
@@ -46,28 +49,28 @@
 
 - (void)setupDatas
 {
-    QQSwitchItem *item0 = [QQSwitchItem itemWithTitle:@"仅Wi-Fi联网" subTitle:nil];
+    QMSwitchItem *item0 = [QMSwitchItem itemWithTitle:@"仅Wi-Fi联网" subTitle:nil];
     [self.datas addObject:item0];
     
-    QQLeftViewItem *item1 = [QQLeftViewItem itemWithTitle:@"定时关闭" subTitle:nil];
+    QMLeftViewItem *item1 = [QMLeftViewItem itemWithTitle:@"定时关闭" subTitle:nil];
     [self.datas addObject:item1];
     
-    QQLeftViewItem *item2 = [QQLeftViewItem itemWithTitle:@"免流量服务" subTitle:@"在线听歌免流量"];
+    QMLeftViewItem *item2 = [QMLeftViewItem itemWithTitle:@"免流量服务" subTitle:@"在线听歌免流量"];
     [self.datas addObject:item2];
     
-    QQLeftViewItem *item3 = [QQLeftViewItem itemWithTitle:@"传歌到手机" subTitle:nil];
+    QMLeftViewItem *item3 = [QMLeftViewItem itemWithTitle:@"传歌到手机" subTitle:nil];
     [self.datas addObject:item3];
     
-    QQLeftViewItem *item4 = [QQLeftViewItem itemWithTitle:@"QPlay与车载音乐" subTitle:nil];
+    QMLeftViewItem *item4 = [QMLeftViewItem itemWithTitle:@"QPlay与车载音乐" subTitle:nil];
     [self.datas addObject:item4];
     
-    QQLeftViewItem *item5 = [QQLeftViewItem itemWithTitle:@"清理占用空间" subTitle:nil];
+    QMLeftViewItem *item5 = [QMLeftViewItem itemWithTitle:@"清理占用空间" subTitle:nil];
     [self.datas addObject:item5];
     
-    QQLeftViewItem *item6 = [QQLeftViewItem itemWithTitle:@"帮助与反馈" subTitle:nil];
+    QMLeftViewItem *item6 = [QMLeftViewItem itemWithTitle:@"帮助与反馈" subTitle:nil];
     [self.datas addObject:item6];
     
-    QQLeftViewItem *item7 = [QQLeftViewItem itemWithTitle:@"关于QQ音乐" subTitle:nil];
+    QMLeftViewItem *item7 = [QMLeftViewItem itemWithTitle:@"关于QQ音乐" subTitle:nil];
     [self.datas addObject:item7];
     
 }
@@ -76,8 +79,8 @@
 {
     NSArray *images = @[@"more_icon_vip_normal", @"more_icon_personal_center", @"more_icon_notificationcenter"];
     NSArray *titles = @[@"升级为VIP", @"个性化中心", @"消息中心"];
-    NSArray *subTitles = @[@"畅享音乐特权", @"点击查看更新"];
-    QQProfileHeaderView *headerView = [[QQProfileHeaderView alloc] initWithImageNames:images titles:titles subTitles:subTitles frame:CGRectMake(QQScreenW - 300, 0, 300, 170)];
+    NSArray *subTitles = @[@"畅享音乐特权", @"默认主题"];
+    QMProfileHeaderView *headerView = [[QMProfileHeaderView alloc] initWithImageNames:images titles:titles subTitles:subTitles frame:CGRectMake(QQScreenW - 300, 0, 300, 170)];
     headerView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:headerView];
     self.headerView = headerView;
@@ -101,7 +104,8 @@
 
 - (void)setupFooterView
 {
-    QQProfileFooteriew *footerView = [[QQProfileFooteriew alloc] init];
+    QMProfileFooterView *footerView = [[QMProfileFooterView alloc] init];
+    footerView.delegate = self;
     footerView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:footerView];
     self.footerView = footerView;
@@ -113,6 +117,21 @@
     }];
 }
 
+#pragma mark -- QQProfileFooteriewDelegate
+- (void)btnClick:(UIButton *)button
+{
+    if(button.tag == SetBtn){
+        QMSettingViewController *setVC = [[QMSettingViewController alloc] init];
+        QMNavigationController *nav = [[QMNavigationController alloc] initWithRootViewController:setVC];
+        
+        [[QMDrawerViewController sharedDrawerViewController] switchViewController:nav];
+    }else{
+        QMLoginViewController *loginVC = [[QMLoginViewController alloc] init];
+        QMNavigationController *nav = [[QMNavigationController alloc] initWithRootViewController:loginVC];
+        [self presentViewController:nav animated:YES completion:nil];
+    }
+}
+
 
 #pragma mark -- UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -122,8 +141,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    QQLeftViewCell *cell = [QQLeftViewCell cellWithTableView:tableView];
-    QQLeftViewItem *item = self.datas[indexPath.row];
+    QMLeftViewCell *cell = [QMLeftViewCell cellWithTableView:tableView];
+    QMLeftViewItem *item = self.datas[indexPath.row];
     cell.leftItem = item;
     return cell;
 }
