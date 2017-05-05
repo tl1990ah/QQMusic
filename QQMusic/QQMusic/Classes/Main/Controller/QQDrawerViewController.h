@@ -30,5 +30,15 @@
  */
 - (void)closeDrawerWithCloseDuration:(CGFloat)duration;
 
+/**
+ *  选择左边控制器进行跳转
+ */
+- (void)switchViewController:(UIViewController *)viewController;
+
+/**
+ *  返回到主控制器
+ */
+- (void)backToMainViewController;
+
 
 @end

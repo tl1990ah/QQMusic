@@ -18,6 +18,9 @@
 @property (nonatomic, strong) QQProfileViewController *leftViewController;
 /** 打开左边控制器后添加的遮盖按钮 */
 @property (nonatomic, strong) UIButton *coverButton;
+
+/** 点击左边菜单后跳转的控制器*/
+@property (nonatomic, strong) UIViewController *destViewController;
 @end
 
 @implementation QQDrawerViewController
@@ -53,6 +56,39 @@
     [super viewDidLoad];
     
 }
+
+- (void)switchViewController:(UIViewController *)viewController
+{
+    self.view.userInteractionEnabled = NO;
+    [self.view addSubview:viewController.view];
+    [self addChildViewController:viewController];
+    self.destViewController = viewController;
+    viewController.view.transform = CGAffineTransformMakeTranslation(QQScreenW, 0);
+    
+    [UIView animateWithDuration:0.25 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
+        
+        viewController.view.transform = CGAffineTransformIdentity;
+    } completion:^(BOOL finished) {
+        
+        self.view.userInteractionEnabled = YES;
+    }];
+
+}
+
+- (void)backToMainViewController
+{
+    [UIView animateWithDuration:0.25 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
+        
+        self.destViewController.view.transform = CGAffineTransformMakeTranslation(QQScreenW, 0);
+    } completion:^(BOOL finished) {
+        
+        [self.destViewController removeFromParentViewController];
+        [self.destViewController.view removeFromSuperview];
+        self.destViewController.view = nil;
+        self.destViewController = nil;
+    }];
+}
+
 
 - (void)openDrawerWithOpenDuration:(CGFloat)duration
 {

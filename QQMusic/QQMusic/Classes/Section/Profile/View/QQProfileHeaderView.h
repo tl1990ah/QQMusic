@@ -10,4 +10,6 @@
 
 @interface QQProfileHeaderView : UIView
 
+- (instancetype)initWithImageNames:(NSArray *)imageNames titles:(NSArray *)titles subTitles:(NSArray *)subTitles frame:(CGRect)frame;
+
 @end
