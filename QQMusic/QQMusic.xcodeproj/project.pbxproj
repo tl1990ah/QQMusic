@@ -32,6 +32,16 @@
 		FE6DA38D1EB9B971001ED9B1 /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6DA3841EB9B971001ED9B1 /* UIColor+Extension.m */; };
 		FE6DA38E1EB9B971001ED9B1 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6DA3861EB9B971001ED9B1 /* UIImage+Extension.m */; };
 		FE6DA38F1EB9B971001ED9B1 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6DA3881EB9B971001ED9B1 /* UIView+Extension.m */; };
+		FE9F19DF1EBC7C920075FE08 /* QMMusiToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9F19DE1EBC7C920075FE08 /* QMMusiToolbar.m */; };
+		FE9F19E21EBC7CA60075FE08 /* QMToolbarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9F19E11EBC7CA60075FE08 /* QMToolbarItem.m */; };
+		FE9F19E51EBC7D020075FE08 /* QMDiscoverCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9F19E41EBC7D020075FE08 /* QMDiscoverCell.m */; };
+		FE9F19E81EBC7D180075FE08 /* QMDiscoverItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9F19E71EBC7D180075FE08 /* QMDiscoverItem.m */; };
+		FE9F19EB1EBC7D330075FE08 /* QMMeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9F19EA1EBC7D330075FE08 /* QMMeHeaderView.m */; };
+		FE9F19EE1EBC7D640075FE08 /* QMMyMusicItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9F19ED1EBC7D640075FE08 /* QMMyMusicItem.m */; };
+		FE9F19F11EBC7DA30075FE08 /* QMMusicHallCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9F19F01EBC7DA30075FE08 /* QMMusicHallCell.m */; };
+		FE9F19F41EBC7DB30075FE08 /* QMMusicHallItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9F19F31EBC7DB30075FE08 /* QMMusicHallItem.m */; };
+		FE9F19F71EBC7DD90075FE08 /* QMMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9F19F61EBC7DD90075FE08 /* QMMainView.m */; };
+		FE9F19FA1EBC7DEA0075FE08 /* QMItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9F19F91EBC7DEA0075FE08 /* QMItem.m */; };
 		FEA358111EBC732A00C16613 /* QMMyVipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA358101EBC732A00C16613 /* QMMyVipViewController.m */; };
 		FEF68C7D1EBACB4700E6747A /* QMProfileHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF68C7C1EBACB4700E6747A /* QMProfileHeaderView.m */; };
 		FEF68C801EBB13AD00E6747A /* NSAttributedString+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF68C7F1EBB13AD00E6747A /* NSAttributedString+Addition.m */; };
@@ -111,6 +121,26 @@
 		FE6DA3871EB9B971001ED9B1 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		FE6DA3881EB9B971001ED9B1 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		FE6DA3901EB9BA76001ED9B1 /* QQMusic.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQMusic.pch; sourceTree = "<group>"; };
+		FE9F19DD1EBC7C920075FE08 /* QMMusiToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QMMusiToolbar.h; sourceTree = "<group>"; };
+		FE9F19DE1EBC7C920075FE08 /* QMMusiToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMMusiToolbar.m; sourceTree = "<group>"; };
+		FE9F19E01EBC7CA60075FE08 /* QMToolbarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QMToolbarItem.h; sourceTree = "<group>"; };
+		FE9F19E11EBC7CA60075FE08 /* QMToolbarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMToolbarItem.m; sourceTree = "<group>"; };
+		FE9F19E31EBC7D020075FE08 /* QMDiscoverCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QMDiscoverCell.h; sourceTree = "<group>"; };
+		FE9F19E41EBC7D020075FE08 /* QMDiscoverCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMDiscoverCell.m; sourceTree = "<group>"; };
+		FE9F19E61EBC7D180075FE08 /* QMDiscoverItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QMDiscoverItem.h; sourceTree = "<group>"; };
+		FE9F19E71EBC7D180075FE08 /* QMDiscoverItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMDiscoverItem.m; sourceTree = "<group>"; };
+		FE9F19E91EBC7D330075FE08 /* QMMeHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QMMeHeaderView.h; sourceTree = "<group>"; };
+		FE9F19EA1EBC7D330075FE08 /* QMMeHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMMeHeaderView.m; sourceTree = "<group>"; };
+		FE9F19EC1EBC7D640075FE08 /* QMMyMusicItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QMMyMusicItem.h; sourceTree = "<group>"; };
+		FE9F19ED1EBC7D640075FE08 /* QMMyMusicItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMMyMusicItem.m; sourceTree = "<group>"; };
+		FE9F19EF1EBC7DA30075FE08 /* QMMusicHallCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QMMusicHallCell.h; sourceTree = "<group>"; };
+		FE9F19F01EBC7DA30075FE08 /* QMMusicHallCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMMusicHallCell.m; sourceTree = "<group>"; };
+		FE9F19F21EBC7DB30075FE08 /* QMMusicHallItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QMMusicHallItem.h; sourceTree = "<group>"; };
+		FE9F19F31EBC7DB30075FE08 /* QMMusicHallItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMMusicHallItem.m; sourceTree = "<group>"; };
+		FE9F19F51EBC7DD90075FE08 /* QMMainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QMMainView.h; sourceTree = "<group>"; };
+		FE9F19F61EBC7DD90075FE08 /* QMMainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMMainView.m; sourceTree = "<group>"; };
+		FE9F19F81EBC7DEA0075FE08 /* QMItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QMItem.h; sourceTree = "<group>"; };
+		FE9F19F91EBC7DEA0075FE08 /* QMItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMItem.m; sourceTree = "<group>"; };
 		FEA3580F1EBC732A00C16613 /* QMMyVipViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QMMyVipViewController.h; sourceTree = "<group>"; };
 		FEA358101EBC732A00C16613 /* QMMyVipViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMMyVipViewController.m; sourceTree = "<group>"; };
 		FEF68C7B1EBACB4700E6747A /* QMProfileHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QMProfileHeaderView.h; sourceTree = "<group>"; };
@@ -268,6 +298,8 @@
 		FE1A536A1EB9A70E0002DDE6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FE9F19F81EBC7DEA0075FE08 /* QMItem.h */,
+				FE9F19F91EBC7DEA0075FE08 /* QMItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -275,6 +307,8 @@
 		FE1A536B1EB9A70E0002DDE6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FE9F19F51EBC7DD90075FE08 /* QMMainView.h */,
+				FE9F19F61EBC7DD90075FE08 /* QMMainView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -380,6 +414,8 @@
 		FE2F44681EBC673C0077BC48 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FE9F19E01EBC7CA60075FE08 /* QMToolbarItem.h */,
+				FE9F19E11EBC7CA60075FE08 /* QMToolbarItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -387,6 +423,8 @@
 		FE2F44691EBC673C0077BC48 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FE9F19DD1EBC7C920075FE08 /* QMMusiToolbar.h */,
+				FE9F19DE1EBC7C920075FE08 /* QMMusiToolbar.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -413,6 +451,8 @@
 		FE2F446F1EBC67850077BC48 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FE9F19E61EBC7D180075FE08 /* QMDiscoverItem.h */,
+				FE9F19E71EBC7D180075FE08 /* QMDiscoverItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -420,6 +460,8 @@
 		FE2F44701EBC67850077BC48 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FE9F19E31EBC7D020075FE08 /* QMDiscoverCell.h */,
+				FE9F19E41EBC7D020075FE08 /* QMDiscoverCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -446,6 +488,8 @@
 		FE2F44751EBC67850077BC48 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FE9F19EC1EBC7D640075FE08 /* QMMyMusicItem.h */,
+				FE9F19ED1EBC7D640075FE08 /* QMMyMusicItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -453,6 +497,8 @@
 		FE2F44761EBC67850077BC48 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FE9F19E91EBC7D330075FE08 /* QMMeHeaderView.h */,
+				FE9F19EA1EBC7D330075FE08 /* QMMeHeaderView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -479,6 +525,8 @@
 		FE2F447B1EBC67850077BC48 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FE9F19F21EBC7DB30075FE08 /* QMMusicHallItem.h */,
+				FE9F19F31EBC7DB30075FE08 /* QMMusicHallItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -486,6 +534,8 @@
 		FE2F447C1EBC67850077BC48 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FE9F19EF1EBC7DA30075FE08 /* QMMusicHallCell.h */,
+				FE9F19F01EBC7DA30075FE08 /* QMMusicHallCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -730,24 +780,34 @@
 				FE1A53801EB9A7D00002DDE6 /* QMDrawerViewController.m in Sources */,
 				FE2F446A1EBC673C0077BC48 /* QMHomeViewController.m in Sources */,
 				FE2F44241EBC23CE0077BC48 /* QMLoginViewController.m in Sources */,
+				FE9F19F11EBC7DA30075FE08 /* QMMusicHallCell.m in Sources */,
+				FE9F19E51EBC7D020075FE08 /* QMDiscoverCell.m in Sources */,
 				FE6DA38B1EB9B971001ED9B1 /* UIBarButtonItem+Extension.m in Sources */,
 				FE1A537A1EB9A7790002DDE6 /* main.m in Sources */,
 				FE2F448B1EBC6C050077BC48 /* QMMusicHallViewController.m in Sources */,
+				FE9F19FA1EBC7DEA0075FE08 /* QMItem.m in Sources */,
+				FE9F19DF1EBC7C920075FE08 /* QMMusiToolbar.m in Sources */,
 				FEA358111EBC732A00C16613 /* QMMyVipViewController.m in Sources */,
+				FE9F19EB1EBC7D330075FE08 /* QMMeHeaderView.m in Sources */,
 				FEF68C831EBB1BE900E6747A /* QMProfileFooterView.m in Sources */,
 				FE1A537D1EB9A7AE0002DDE6 /* QMBaseViewController.m in Sources */,
+				FE9F19F41EBC7DB30075FE08 /* QMMusicHallItem.m in Sources */,
+				FE9F19E81EBC7D180075FE08 /* QMDiscoverItem.m in Sources */,
 				FE2F44821EBC680D0077BC48 /* QMDiscoverViewController.m in Sources */,
 				FEF68C861EBB2FAE00E6747A /* QMLeftViewItem.m in Sources */,
 				FE6DA38D1EB9B971001ED9B1 /* UIColor+Extension.m in Sources */,
 				FE2F44881EBC6BE90077BC48 /* QMMeViewController.m in Sources */,
 				FEF68C8C1EBB30E100E6747A /* QMLeftViewCell.m in Sources */,
 				FE6DA38E1EB9B971001ED9B1 /* UIImage+Extension.m in Sources */,
+				FE9F19F71EBC7DD90075FE08 /* QMMainView.m in Sources */,
 				FE6DA38C1EB9B971001ED9B1 /* UIButton+Extension.m in Sources */,
 				FE6DA38F1EB9B971001ED9B1 /* UIView+Extension.m in Sources */,
+				FE9F19E21EBC7CA60075FE08 /* QMToolbarItem.m in Sources */,
 				FEF68C7D1EBACB4700E6747A /* QMProfileHeaderView.m in Sources */,
 				FE1A53861EB9AE400002DDE6 /* QMNavigationController.m in Sources */,
 				FE6DA3891EB9B971001ED9B1 /* NSObject+Extension.m in Sources */,
 				FE6DA38A1EB9B971001ED9B1 /* NSString+LCExtension.m in Sources */,
+				FE9F19EE1EBC7D640075FE08 /* QMMyMusicItem.m in Sources */,
 				FEF68C801EBB13AD00E6747A /* NSAttributedString+Addition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
